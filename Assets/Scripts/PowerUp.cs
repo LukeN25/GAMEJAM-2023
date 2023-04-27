@@ -23,7 +23,7 @@ public class PowerUp : MonoBehaviour
        
 
        //Player Upgrade
-       PlayerMovement stats = player.GetComponent<PlayerMovement>();
+       Player stats = player.GetComponent<Player>();
        stats.jumpingPower *= multiplier;
 
        //Power-Up Disappear
