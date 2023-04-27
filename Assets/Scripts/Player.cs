@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int health;
+    public int knockBack;
     List<Enemy> availableEnemies = new List<Enemy>();
 
     //If enemy enters the attack range, the enemy script is added to a list
@@ -29,7 +30,10 @@ public class Player : MonoBehaviour
     void Start()
     {
     }
- 
+     public void TakeDamage(int damage)
+    {
+        health -= damage;
+    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -46,6 +50,7 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Attacking " + i);
             theEnemy = availableEnemies[i];
+            theEnemy.GetComponentInParent<Rigidbody2D>().AddForce((transform.right + transform.up) * knockBack);
             theEnemy.TakeDamage(3);
         }
     }
