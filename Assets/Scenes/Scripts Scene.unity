@@ -205,7 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   enemy: {fileID: 9294261}
-  knockBack: 200
+  knockBack: 500
   damage: 3
 --- !u!212 &9294265
 SpriteRenderer:
@@ -873,6 +873,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5481086641753154545, guid: 488f4c96b9ccdb04fad7c79ef081984c, type: 3}
+      propertyPath: knockBack
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5481086641753154550, guid: 488f4c96b9ccdb04fad7c79ef081984c, type: 3}
       propertyPath: m_RootOrder
       value: 2
