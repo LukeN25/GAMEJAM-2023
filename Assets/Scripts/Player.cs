@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    private float horizontal;
     public int health;
     public int knockBack;
+    public int playerDamage;
+    private bool isFacingRight = true;
     List<Enemy> availableEnemies = new List<Enemy>();
 
     //If enemy enters the attack range, the enemy script is added to a list
@@ -17,7 +20,16 @@ public class Player : MonoBehaviour
             availableEnemies.Add(col.GetComponent<Enemy>());
         }
     }
-
+    private void Flip()
+    {
+        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
+    }
     //If enemy exits the attack range, the enemy script is removed from the list
     void OnTriggerExit2D(Collider2D other)
     {
@@ -48,10 +60,21 @@ public class Player : MonoBehaviour
         Enemy theEnemy;
         for (int i = 0; availableEnemies.Count > i; i++)
         {
-            Debug.Log("Attacking " + i);
-            theEnemy = availableEnemies[i];
-            theEnemy.GetComponentInParent<Rigidbody2D>().AddForce((transform.right + transform.up) * knockBack);
-            theEnemy.TakeDamage(3);
+            if (isFacingRight && horizontal < 0f)
+            {
+                Debug.Log("Attacking " + i);
+                theEnemy = availableEnemies[i];
+                theEnemy.GetComponentInParent<Rigidbody2D>().AddForce((transform.right + transform.up) * knockBack);
+                theEnemy.TakeDamage(playerDamage);
+            }
+            else
+            {
+                isFacingRight = !isFacingRight;
+                Debug.Log("Attacking " + i);
+                theEnemy = availableEnemies[i];
+                theEnemy.GetComponentInParent<Rigidbody2D>().AddForce((-transform.right + transform.up) * knockBack);
+                theEnemy.TakeDamage(playerDamage);
+            }
         }
     }
 }
