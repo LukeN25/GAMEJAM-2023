@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
         Enemy theEnemy;
         for (int i = 0; availableEnemies.Count > i; i++)
         {
-            if (isFacingRight && horizontal < 0f)
+            if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
             {
                 Debug.Log("Attacking " + i);
                 theEnemy = availableEnemies[i];
