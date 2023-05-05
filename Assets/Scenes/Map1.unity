@@ -1034,6 +1034,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7335062799969604355, guid: f5d4d8421fb3453429bc44492daad927, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335062799969604355, guid: f5d4d8421fb3453429bc44492daad927, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
       value: 0.5
       objectReference: {fileID: 0}
@@ -1049,6 +1053,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335062799969604414, guid: f5d4d8421fb3453429bc44492daad927, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 426507126}
     - target: {fileID: 7335062799969604415, guid: f5d4d8421fb3453429bc44492daad927, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1117,6 +1125,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4896325145025994, guid: 44054954b77510d47b1fcbe02bebc579, type: 3}
   m_PrefabInstance: {fileID: 195740476}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &208088997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7335062799969604413, guid: f5d4d8421fb3453429bc44492daad927, type: 3}
+  m_PrefabInstance: {fileID: 1092569026}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &208089003
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208088997}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9987011213f1a9d4e998c2eb0487f2be, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &228906520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1572,6 +1605,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7335062799969604355, guid: f5d4d8421fb3453429bc44492daad927, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335062799969604355, guid: f5d4d8421fb3453429bc44492daad927, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
       value: 0.5
       objectReference: {fileID: 0}
@@ -1952,6 +1989,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &426507120 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7335062799969604413, guid: f5d4d8421fb3453429bc44492daad927, type: 3}
+  m_PrefabInstance: {fileID: 174666148}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &426507126
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426507120}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9987011213f1a9d4e998c2eb0487f2be, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &430788284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26642,6 +26704,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7335062799969604355, guid: f5d4d8421fb3453429bc44492daad927, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335062799969604355, guid: f5d4d8421fb3453429bc44492daad927, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
       value: 0.5
       objectReference: {fileID: 0}
@@ -26657,6 +26723,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7335062799969604414, guid: f5d4d8421fb3453429bc44492daad927, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 208089003}
     - target: {fileID: 7335062799969604415, guid: f5d4d8421fb3453429bc44492daad927, type: 3}
       propertyPath: m_Sprite
       value: 
