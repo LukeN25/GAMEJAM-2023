@@ -66,6 +66,8 @@ public class Player : MonoBehaviour
 
         horizontal = Input.GetAxisRaw("Horizontal");
 
+        animator.SetFloat("Speed", speed);
+
         Flip();
     }
 
