@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public int knockBack;
     public int playerDamage;
     public bool isFacingRight = true;
+    public Animator animator;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -64,6 +65,8 @@ public class Player : MonoBehaviour
         }
 
         horizontal = Input.GetAxisRaw("Horizontal");
+
+        animator.SetFloat("Speed", speed);
 
         Flip();
     }

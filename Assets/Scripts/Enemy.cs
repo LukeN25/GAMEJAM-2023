@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     public GameObject enemy;
     public float knockBack = 200f;
     public int damage = 3;
+     public Animator animator;
+
 
     void Start()
     {
